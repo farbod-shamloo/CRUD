@@ -1,0 +1,91 @@
+{
+  "data": {
+    "pageIndex": 1,
+    "pageSize": 8,
+    "totalCount": 4,
+    "totalPages": 1,
+    "indexFrom": 0,
+    "items": [
+      {
+        "id": "1",
+        "code": "33",
+        "name": "ادمین مدیریت فایل",
+        "isActive": true,
+        "isPrivate": true,
+        "isSystemic": false,
+        "isNewTab": false,
+        "withToken": false,
+        "isExternal": false,
+        "displayOrder": 1,
+        "description": null,
+        "sendSystemCode": null,
+        "applicationSubGroupName": "زیر گروه سامانه کاربران",
+        "applicationGroupName": "گروه سامانه کاربران",
+        "roles": [
+        ],
+        "applicationType": null
+      },
+      {
+        "id": "2",
+        "code": "22",
+        "name": "مدیریت فایل",
+        "isActive": true,
+        "isPrivate": true,
+        "isSystemic": false,
+        "isNewTab": false,
+        "withToken": false,
+        "isExternal": false,
+        "displayOrder": 1,
+        "description": null,
+        "sendSystemCode": null,
+        "applicationSubGroupName": "زیر گروه سامانه کاربران",
+        "applicationGroupName": "گروه سامانه کاربران",
+        "roles": [
+        ],
+        "applicationType": null
+      },
+      {
+        "id": "3",
+        "code": "11",
+        "name": "مدیریت کاربران",
+        "isActive": true,
+        "isPrivate": true,
+        "isSystemic": true,
+        "isNewTab": true,
+        "withToken": false,
+        "isExternal": false,
+        "displayOrder": 1,
+        "description": "سامانه مدیریت کاربران",
+        "sendSystemCode": false,
+        "applicationSubGroupName": "زیر گروه سامانه کاربران",
+        "applicationGroupName": "گروه سامانه کاربران",
+        "roles": [
+        ],
+        "applicationType": null
+      },
+      {
+        "id": "4",
+        "code": "55",
+        "name": "سهبا",
+        "isActive": true,
+        "isPrivate": false,
+        "isSystemic": false,
+        "isNewTab": false,
+        "withToken": false,
+        "isExternal": false,
+        "displayOrder": 1,
+        "description": null,
+        "sendSystemCode": false,
+        "applicationSubGroupName": "زیر گروه سامانه کاربران",
+        "applicationGroupName": "گروه سامانه کاربران",
+        "roles": [
+        ],
+        "applicationType": null
+      }
+    ],
+    "hasPreviousPage": true,
+    "hasNextPage": false
+  },
+  "isSuccess": true,
+  "message": null
+}

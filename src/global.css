@@ -1,0 +1,42 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+}
+
+@font-face {
+  font-family:'vazir';
+  src: url('./assets/fonts/vazir.eot');
+  src: url('./assets/fonts/vazir.woff2') format('woff2'), 
+  url('./assets/fonts/vazir.woff') format('woff'), 
+  url('./assets/fonts/vazir.ttf') format('truetype');
+  font-weight: normal;
+  font-display: swap;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'vazir';
+}
+
+body{
+  direction: rtl;
+  font-family: "vazir";
+  margin: auto;
+  /* max-width: 1800px; */
+  min-height: 100vh;
+  padding: 10px;
+
+}
+
+input{
+  font-family: "vazir";
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}

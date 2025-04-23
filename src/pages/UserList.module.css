@@ -1,0 +1,12 @@
+.sub__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap; /* این به المان‌ها اجازه می‌دهد که در صورتی که فضای کافی نباشد، به خط بعدی بروند */
+  }
