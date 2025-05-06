@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+
+import {useSearchParams} from "react-router-dom"
 import styles from "./UserList.module.css";
 import {
   Table,
@@ -31,7 +33,22 @@ function UserList() {
   const [searchText, setSearchText] = useState(""); // متن جستجو
   const [selectedType, setSelectedType] = useState(null); // نوع فیلتر کاربر
   const [selectedStatus, setSelectedStatus] = useState(null); // وضعیت فیلتر کاربر
-  const [pageSize, setPageSize] = useState(5); // تعداد سطرها در هر صفحه
+
+
+  
+  const [searchParams, setSearchParams] = useSearchParams();
+const initialPage = parseInt(searchParams.get("page")) || 1;
+const initialPageSize = parseInt(searchParams.get("pageSize")) || 5;
+
+const [currentPage, setCurrentPage] = useState(initialPage);
+const [pageSize, setPageSize] = useState(initialPageSize);
+
+useEffect(() => {
+  setSearchParams({
+    page: currentPage,
+    pageSize: pageSize,
+  });
+}, [currentPage, pageSize]);
 
   // گرفتن دیتا از فایل json
   useEffect(() => {
@@ -142,6 +159,12 @@ function UserList() {
       ),
     },
     {
+      title: "نام سیستم",
+      dataIndex: "systems",
+      key: "systems",
+    },
+    
+    {
       title: "عملیات",
       key: "action",
       render: (_, record) => (
@@ -251,6 +274,11 @@ function UserList() {
         pagination={{
           pageSize: pageSize,
           position: ["bottomCenter"],
+          current: currentPage,
+          onChange: (page, pageSize) => {
+            setCurrentPage(page);
+            setPageSize(pageSize);
+          },
         }}
         scroll={{ x: "max-content" }}
         style={{ width: "100%" }}

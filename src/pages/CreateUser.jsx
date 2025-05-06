@@ -17,28 +17,31 @@ const CreateUser = ({ data , setData}) => {
     setIsModalVisible(false);
   };
 
-  // تابع برای ثبت کاربر جدید
   const handleAddUser = (values) => {
+    // ایجاد ID جدید (بر اساس بیشترین id فعلی)
+    const newId = data.length > 0 ? Math.max(...data.map(user => user.id)) + 1 : 1;
+  
     const newUser = {
-      id: data.length + 1, 
-      ...values, 
+      id: newId,
+      ...values,
     };
-
-   
+  
+    // اضافه کردن به اول لیست
     setData([newUser, ...data]);
-
-
+  
+    // بستن مدال
     setIsModalVisible(false);
-
+  
+    // نوتیفیکیشن موفقیت
     notification.success({
       message: "ثبت کاربر جدید موفقیت‌آمیز بود",
       description: `کاربر ${values.firstName} ${values.lastName} با موفقیت ثبت شد.`,
     });
-
-   
+  
+    // ریست فرم
     form.resetFields();
   };
-
+  
 
 
   return (

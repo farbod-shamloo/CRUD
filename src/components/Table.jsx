@@ -1,12 +1,13 @@
-import React from 'react'
-import UserList from '../pages/UserList'
+import React from "react";
+
+import UserList from "../pages/UserList";
 
 function Table() {
   return (
     <>
-     <UserList />
+      <UserList />
     </>
-  )
+  );
 }
 
-export default Table
+export default Table;
